@@ -5,8 +5,9 @@ const del = document.getElementsByClassName("del")[0];
 const equal = document.getElementsByClassName("equal")[0];
 document.onkeydown = () => {
     const reg = /[a-zA-Z]/.test(val.value);
+const rap=/[ا-ي]/.test(val.value);
 
-    if (reg == true) {
+    if (reg == true|rap==true) {
         val.value = "";
     }
 }
@@ -37,8 +38,9 @@ del.addEventListener("click", () => {
 // result
 equal.addEventListener("click", () => {
     const reg = /[a-zA-Z]/.test(val.value);
+const rap=/[ا-ي]/.test(val.value);
 
-    if (reg == true) {
+    if (reg == true|rap==true) {
         val.value = "";
     }else{
     val.value = eval(val.value);
